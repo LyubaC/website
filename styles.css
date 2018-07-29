@@ -2,11 +2,18 @@ body {
     margin: 0;
     background-color: #fafde2;
 }
+
+.top-menu {
+    position: fixed;
+    width: 100%;
+    background-color: rgba(147, 216, 95, 0.5);
+}
 header img {
     width: 100%;
 }
+
 .content {
-    width: 920px;
+    max-width: 920px;
     font-family: 'Eczar', serif;
     margin: 0 auto;
 }
@@ -15,6 +22,8 @@ header img {
     float: right;
     margin-top: 12px;
 }
+
+
 #navbar {
     margin: 0;
     padding: 0;
@@ -31,10 +40,16 @@ header img {
 
 #navbar a {
     padding: 5px 10px;
+    color: #000;
+    text-decoration: none;
+}
+#navbar a:hover {
+    text-decoration: underline;
 }
 
 h1 {
     text-align: center;
+    margin: 6px;
 }
 
 .recepty {

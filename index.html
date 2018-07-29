@@ -10,41 +10,53 @@
 </head>
 <body>
     <header>
-        <div class="navbar-right">
-            <ul id="navbar">
-                <li><a href="#">Головна</a></li>
-                <li><a href="#">Події</a></li>
-                <li><a href="#">Посилання</a></li>
-                <li><a href="#">Зв'язок</a></li>
-            </ul>
-                    </div>
-        <h1>Сайт Чепіль Любові</h1>
+        <div class="top-menu">
+            <div class="navbar-right">
+                <ul id="navbar">
+                    <li><a href="#">Головна</a></li>
+                    <li><a href="#events">Події</a></li>
+                    <li><a href="#recept">Рецепти</a></li>
+                    <li><a href="#end">Зв'язок</a></li>
+                </ul>
+            </div>
+            <h1>Сайт Чепіль Любові</h1>
+        </div>
         <img src="img/image.jpg" width="920" alt="Image"> 
     </header>
     
     <div class="content">
        
         <div class="about">     
-            <img src="img/foto-my.jpg" class="float-left" alt="Foto">
+            <img src="img/lyuba.jpg" class="float-left" alt="Любов-Чепіль">
             <p>Вітаю всіх хто тут і зараз!</p>
             <p>Можливо знайдуться ті, кому буде до вподоби цей блог. Я буду розміщувати тут посилання на різні події, цікаві статті, а також сайти з приготування смаколиків (на те, що реально приготувати самому без особливих навиків).</p>
         </div>
         
-        <div class="info-block">
+        <div class="info-block" id="events">
             <h2>Події у Львові</h2>
             
         </div>
         
-        <div class="info-block">
+        <div class="info-block" id="recept">
             <h2>Смаколики</h2>
             <div class="recepty">
                 <a href="http://www.smachno.in.ua/prygotuvannya.php?id=297" target="_blank">
-                <img src="img/kabachkoviy-tort.jpg" alt="Kabachkoviy-tort" width="200" height="150">
+                <img src="img/kabachkoviy-tort.jpg" alt="Кабачковий-торт" width="200" height="150">
                 Рецепт тут</a>
             </div>
             <div class="recepty">
                 <a href="https://smakotainfo.com/vipichka/plyacok-popelyushka.html" target="_blank">
-                    <img src="img/plyacok_popelyushka.jpg" alt="Plyacok_popelyushka" width="200" height="150">
+                    <img src="img/plyacok_popelyushka.jpg" alt="Пляцок-Попелюшка" width="200" height="150">
+                Рецепт тут</a>
+            </div>
+            <div class="recepty">
+                <a href="http://www.smachno.in.ua/prygotuvannya.php?id=116" target="_blank">
+                    <img src="img/sup-pyure-kabachkiv.jpg" alt="Суп-пюре-із-кабачків" width="200" height="150">
+                Рецепт тут</a>
+            </div>
+            <div class="recepty">
+                <a href="http://recept-torta.com/mnogoslojnye-torty/tort-snikers-recept-poshagovo" target="_blank">
+                    <img src="img/tort-snikers.jpg" alt="Торт-Снікерс" width="200" height="150">
                 Рецепт тут</a>
             </div>
             
@@ -56,7 +68,7 @@
             </a>
         </div>
         
-        <div>
+        <div id="end">
             <h3>Залишити відповідь</h3>
             <form method="POST" action="https://formspree.io/lyubac@ukr.net">
                 <p>

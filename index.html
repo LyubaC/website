@@ -4,23 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>LyubaC</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Eczar" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
 </head>
 <body>
     <header>
-        <div class="top-menu">
-            <div class="navbar-right">
-                <ul id="navbar">
-                    <li><a href="#">Головна</a></li>
-                    <li><a href="#events">Події</a></li>
-                    <li><a href="#recept">Рецепти</a></li>
-                    <li><a href="#end">Зв'язок</a></li>
-                </ul>
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <a class="navbar-brand" href="#">Сайт Чепіль Любові</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ml-auto">
+              <a class="nav-item nav-link active" href="#">Головна <span class="sr-only">(current)</span></a>
+              <a class="nav-item nav-link" href="#"events>Події</a>
+              <a class="nav-item nav-link" href="#recept">Рецепти</a>
+              <a class="nav-item nav-link" href="#end">Зв'язок</a>
             </div>
-            <h1>Сайт Чепіль Любові</h1>
-        </div>
+          </div>
+        </nav>
+
         <img src="img/image.jpg" width="920" alt="Image"> 
     </header>
     
@@ -29,16 +39,18 @@
         <div class="about">     
             <img src="img/lyuba.jpg" class="float-left" alt="Любов-Чепіль">
             <p>Вітаю всіх хто тут і зараз!</p>
-            <p>Можливо знайдуться ті, кому буде до вподоби цей блог. Я буду розміщувати тут посилання на різні події, цікаві статті, а також сайти з приготування смаколиків (на те, що реально приготувати самому без особливих навиків).</p>
+            <p>Можливо знайдуться ті, кому буде до вподоби цей блог. Я буду розміщувати тут посилання на різні події, цікаві статті, а також сайти з приготування страв (на те, що реально приготувати самому без особливих навиків).</p>
         </div>
         
         <div class="info-block" id="events">
             <h2>Події у Львові</h2>
-            
+            <div class="row" id="news">
+                
+            </div>
         </div>
         
         <div class="info-block" id="recept">
-            <h2>Смаколики</h2>
+            <h2>Рецепти</h2>
             <div class="recepty">
                 <a href="http://www.smachno.in.ua/prygotuvannya.php?id=297" target="_blank">
                 <img src="img/kabachkoviy-tort.jpg" alt="Кабачковий-торт" width="200" height="150">
@@ -61,37 +73,40 @@
             </div>
             
         </div>
+
+
+        <div class="info-block" id="end">
+            <h3>Залишити відповідь</h3>
+            <form method="POST" action="https://formspree.io/lyubac@ukr.net">
+                <div class="form-group">
+                    <label for="name">Ваше ім'я:</label>
+                    <input type="text" class="form-control" name="name" id="name" placeholder="Ваше ім'я" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Електронна адреса:</label>
+                    <input type="text" class="form-control" name="email" id="email" placeholder="Електронна адреса" required>
+                </div>
+                <div class="form-group">
+                    <label for="additional">Повідомлення:</label>
+                    <textarea class="form-control" rows="10" cols="45" name="additional" id="additional" placeholder="Повідомлення"></textarea>
+                </div>
+                <div class="form-group">
+                    <input class="btn btn-primary ml-auto" type="submit"> 
+                </div>
+            </form>
+        </div>
         <div class="info-block grid">
-            <h2>Посилання на мою сторінку</h2>
+            <!--<h2>Посилання на мою сторінку</h2>-->
             <a href="https://www.facebook.com/lyuba.chepil.9" target="_blank">
                 <img src="img/facebook.png" alt="Facebook" class="social-icon">
             </a>
         </div>
-        
-        <div id="end">
-            <h3>Залишити відповідь</h3>
-            <form method="POST" action="https://formspree.io/lyubac@ukr.net">
-                <p>
-                    <label for="name">Ваше ім'я:</label>
-                    <input type="text" name="name" id="name" required>
-                </p>
-                <p>
-                    <label for="email">Електронна адреса:</label>
-                    <input type="text" name="email" id="email" required>
-                </p>
-                <p>
-                    <label for="additional">Повідомлення:</label>
-                    <textarea rows="10" cols="45" name="additional" id="additional"></textarea>
-                </p>
-                <p>
-                    <input type="submit"> 
-                </p>
-            </form>
-        </div>
-
   </div> 
+  <script src="js/index.js"></script>
     <footer>
         <span>© 2018 Чепіль Любов</span>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
 </html>

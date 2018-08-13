@@ -23,10 +23,11 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ml-auto">
-              <a class="nav-item nav-link active" href="#">Головна <span class="sr-only">(current)</span></a>
-              <a class="nav-item nav-link" href="#"events>Події</a>
-              <a class="nav-item nav-link" href="#recept">Рецепти</a>
-              <a class="nav-item nav-link" href="#end">Зв'язок</a>
+              <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-item nav-link" href="#news">News</a>
+              <a class="nav-item nav-link" href="#recipes">Recipes</a>
+              <a class="nav-item nav-link" href="#weather">Weather</a>
+              <a class="nav-item nav-link" href="#contact">Contact</a>
             </div>
           </div>
         </nav>
@@ -36,29 +37,79 @@
     
     <div class="content">
        
-        <div class="about">     
-            <img src="img/lyuba.jpg" class="float-left" alt="Любов-Чепіль">
-            <p>Вітаю всіх хто тут і зараз!</p>
-            <p>Можливо знайдуться ті, кому буде до вподоби цей блог. Я буду розміщувати тут посилання на різні події, цікаві статті, а також сайти з приготування страв (на те, що реально приготувати самому без особливих навиків).</p>
+        <div class="about info-block row">  
+            <div class="col-12">
+                <img src="img/lyuba.jpg" class="float-center" alt="Любов-Чепіль">
+            </div>
+
+            <div class="col-12">
+                <p>Вітаю всіх хто тут і зараз!</p>
+                <p>Можливо знайдуться ті, кому буде до вподоби цей блог. Я буду розміщувати тут посилання на різні події, цікаві статті, а також сайти з приготування страв (на те, що реально приготувати самому без особливих навиків).</p>
+            </div>
         </div>
         
-        <div class="info-block" id="events">
-            <h2>Події у Львові</h2>
-            <div class="row" id="news">
+        <div class="info-block" id="news">
+            <h2>News</h2>
+            <div class="row" id="news-list">
                 
             </div>
         </div>
 
-        <div class="info-block" id="recept">
-            <h2>Рецепти</h2>
-            <div class="row" id="recipes"> 
+        <div class="info-block" id="recipes">
+            <h2>Recipes</h2>
+            <div class="row" id="recipes-list"> 
             
            </div>
         </div>
 
+        <div class="info-block" id="weather">
+            
+            
+            <div id="weather-widget" class="weather-widget">
+            	<h2 class="weather-widget__city-name">Weather in Lviv, UA</h2>
+            	<div id="recipes-list"> 
+            		<div class="row">
+                    	<h3 class="weather-widget__temperature col-5">
+                    		<img class="weather-widget__img" src="" alt="Weather Lviv , UA" width="50" height="50">
+                    	</h3>
+                    </div>
+            		<div class="row">
+                    	<div class="weather-widget__main col-5"></div>
+                    </div>
+            		<div class="row">
+        				<div class="col-1">Wind</div>
+        				<div class="col-4" id="weather-widget-wind"><span id="wind-speed"></span><span id="wind-direction"> </span></div>
+                    </div>
+            		<div class="row">
+                				<div class="col-1">Cloudiness</div>
+                				<div class="col-4" id="weather-widget__cloudiness"></div>
+                    </div>
+            		<div class="row">
+                				<div class="col-1">Pressure</div>
+                				<div class="col-4" id="weather-widget-pressure"></div>
+                    </div>
+            		<div class="row">
+                				<div class="col-1">Humidity</div>
+                				<div class="col-4" id="humidity"></div>
+                    </div>
+            		<div class="row">
+                				<div class="col-1">Sunrise</div>
+                				<div class="col-4" id="sunrise"></div>
+                    </div>
+            		<div class="row">
+                				<div class="col-1">Sunset</div>
+                				<div class="col-4" id="sunset"></div>
+                    </div>
 
-        <div class="info-block" id="end">
-            <h3>Залишити відповідь</h3>
+                </<div>
+            </div>
+            
+            
+        </div>
+
+
+        <div class="info-block" id="contact">
+            <h2>Contact me</h2>
             <form method="POST" action="https://formspree.io/lyubac@ukr.net">
                 <div class="form-group">
                     <label for="name">Ваше ім'я:</label>

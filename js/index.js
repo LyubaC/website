@@ -17,8 +17,23 @@ $(document).ready(function(){
             case (degrees < 68):
                 return("North East");
                 break;
+            case (degrees < 123):
+                return("East");
+                break;
             case (degrees < 158):
                 return("South East");
+                break;
+            case (degrees < 203):
+                return("South");
+                break;
+            case (degrees < 248):
+                return("South West");
+                break;
+            case (degrees < 293):
+                return("West");
+                break;
+            case (degrees < 338):
+                return("North West");
                 break;
             default:
                 return("North");
@@ -69,9 +84,6 @@ $(document).ready(function(){
                 let item = json.recipes[i];
                 addItem("#recipes-list", item.source_url, item.title, item.image_url, "Rating: " + item.social_rank);
             }
-            // $([document.documentElement, document.body]).animate({
-            //     scrollTop: $("#recipes").offset().top
-            // }, 2000);
         }});
     }
     

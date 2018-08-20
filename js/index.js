@@ -50,7 +50,7 @@ $(document).ready(function(){
                 $("#wind-speed").append(result.wind.speed + " m/s, ");
                 $("#wind-direction").append(windDirection(result.wind.deg) + " ("+result.wind.deg+"°)");
                 $("#weather-widget__cloudiness").append(result.clouds.all);
-                $("#weather-widget-pressure").append(result.main.pressure + " hpa");
+                $("#weather-widget-pressure").append((result.main.pressure / 1.33322387415).toFixed(0) + " mmHg");
                 $("#humidity").append(result.main.humidity + " %");
                 $("#sunrise").append(convertTime(result.sys.sunrise).toLocaleString('en-US'));
                 $("#sunset").append(convertTime(result.sys.sunset).toLocaleString('en-US'));
@@ -60,7 +60,7 @@ $(document).ready(function(){
     
     function addItem(selector, url, title, img_url, desc) {
         $(selector).append(
-           "<article class='news-item col-12 col-sm-6 col-lg-4'><a href='"+url+"'><h3>" + title + "</h3>"+
+           "<article class='news-item col-12 col-sm-6 col-lg-4'><a href='"+url+"' target=\"_blank\"><h3>" + title + "</h3>"+
             "<img src=\"" + img_url + "\" /><p>" + desc + "</p></a></article>"
         );
     }
@@ -82,7 +82,7 @@ $(document).ready(function(){
             let json = JSON.parse(result);
             for (let i = 0; i < json.recipes.length; i++) {
                 let item = json.recipes[i];
-                addItem("#recipes-list", item.source_url, item.title, item.image_url, "Rating: " + item.social_rank);
+                addItem("#recipes-list", item.source_url, item.title, item.image_url, "Rating: " + item.social_rank.toFixed(2));
             }
         }});
     }
@@ -91,6 +91,10 @@ $(document).ready(function(){
         document.body.scrollTop = 0; // For Safari
         document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
     }
+
 });
 
+$('.navbar-nav a').on('click', function(){
+    $('.navbar-toggler-icon').click(); //bootstrap 4.x
+});
       

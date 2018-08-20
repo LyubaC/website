@@ -12,6 +12,7 @@ nav.navbar {
 }
 header img {
     width: 100%;
+    min-height: 150px;
 }
 .content {
     max-width: 920px;
@@ -25,7 +26,12 @@ header img {
     border: 2px solid green;
     border-radius: 20px 5px;
 }
-
+.centered {
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 h1 {
     text-align: center;
     margin: 6px;
@@ -44,17 +50,27 @@ h1 {
     /*display: inline-block;*/
     margin: 30px 0;
 }
+.about img {
+    max-width: 270px;
+    margin-bottom: 20px;
+}
 .about p {
     font-size: 24px;
 }
 .info-block {
     padding: 50px 0;
+    margin: 0 15px;
 }
-
+.row {
+    margin: 0;
+}
+.news-item {
+    margin: 20px 0;
+}
 .news-item img{
     width: 100%;
     max-height: 200px;
-    padding: 20px;
+    /*padding: 20px;*/
 }
 .info-block h2 {
     text-align: center;
@@ -66,15 +82,58 @@ h1 {
 .grid a {
     margin: 0 auto;
 }
+a, a:link, a:visited, a:active, a:hover {
+    color: black;
+}
+a:hover {
+    cursor: pointer;
+    text-decoration: none;
+}
 .social-icon {
     width: 64px;
 }
+#weather-widget {
+    max-width: 320px;
+    margin: 0 auto;
+}
+#weather-list {
+    border: 2px solid #c0c0bf;
+    border-radius: 20px;
+}
+.weather-widget__temperature,
+.weather-widget__main {
+    text-transform: capitalize;
+    text-align: center;
+    margin: 0 auto;
+}
+.weather-widget__main {    
+    top: -8px;
+}
 form {
     border: 2px solid #c0c0bf;
+    border-radius: 20px;
     padding: 20px;
     margin: 30px auto;
     max-width: 490px;
 }
+form .btn-primary, 
+form .btn-primary:hover, 
+form .btn-primary:not(:disabled):not(.disabled):active {
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+}
+.btn-primary:not(:disabled):not(.disabled):active:focus {
+    box-shadow: 0 0 0 0.2rem rgba(63, 167, 61, 0.5);
+}
+.form-control:focus {
+    border-color: #28a745;
+    box-shadow: 0 0 0 0.2rem #28a7454d;
+}
+.btn-primary:hover{
+    cursor: pointer;
+}
+
 footer {
     background-color: #8BC34A;
     border-top: 2px solid #4CAF50;
